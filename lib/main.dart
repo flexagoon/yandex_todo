@@ -5,11 +5,11 @@ import 'package:intl/date_symbol_data_local.dart';
 import 'package:intl/intl.dart';
 import 'package:yandex_todo/app/app.dart';
 import 'package:yandex_todo/app/data/tasks_repository.dart';
-import 'package:yandex_todo/logger.dart';
+import 'package:yandex_todo/tasks_logger.dart';
 
 void main() {
   Bloc.transformer = restartable();
-  Bloc.observer = Logger();
+  Bloc.observer = TasksLogger();
 
   final tasksRepository = TasksRepository();
 
